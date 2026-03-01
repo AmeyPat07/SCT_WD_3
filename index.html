@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-container">
+        <header class="quiz-header">
+            <h1 class="quiz-title">Quiz Master</h1>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <div class="quiz-stats">
+                <span class="question-counter">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">10</span></span>
+                <span class="score-display">Score: <span id="currentScore">0</span></span>
+            </div>
+        </header>
+
+        <main class="quiz-main">
+            <div id="startScreen" class="screen active">
+                <div class="start-content">
+                    <h2>Welcome to Quiz Master!</h2>
+                    <p>Test your knowledge with our interactive quiz featuring multiple question types.</p>
+                    <div class="quiz-features">
+                        <div class="feature">
+                            <span class="feature-icon">🎯</span>
+                            <span>Single Select</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">☑️</span>
+                            <span>Multi Select</span>
+                        </div>
+                        <div class="feature">
+                            <span class="feature-icon">✏️</span>
+                            <span>Fill in the Blanks</span>
+                        </div>
+                    </div>
+                    <button id="startBtn" class="btn btn-primary">Start Quiz</button>
+                </div>
+            </div>
+
+            <div id="questionScreen" class="screen">
+                <div class="question-container">
+                    <div class="question-type" id="questionType"></div>
+                    <h3 class="question-text" id="questionText"></h3>
+                    <div id="answerContainer" class="answer-container"></div>
+                    <div class="question-actions">
+                        <button id="nextBtn" class="btn btn-primary" disabled>Next Question</button>
+                        <button id="submitBtn" class="btn btn-success" style="display: none;">Submit Quiz</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="resultsScreen" class="screen">
+                <div class="results-content">
+                    <div class="results-header">
+                        <h2>Quiz Complete!</h2>
+                        <div class="final-score">
+                            <span class="score-number" id="finalScore">0</span>
+                            <span class="score-total">/ <span id="maxScore">0</span></span>
+                        </div>
+                    </div>
+                    <div class="results-details">
+                        <div class="stat-item">
+                            <span class="stat-label">Correct Answers</span>
+                            <span class="stat-value" id="correctAnswers">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Total Questions</span>
+                            <span class="stat-value" id="totalQuestionsResult">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Accuracy</span>
+                            <span class="stat-value" id="accuracy">0%</span>
+                        </div>
+                    </div>
+                    <div class="result-message" id="resultMessage"></div>
+                    
+                    <div class="question-review-section">
+                        <h3 class="review-title">Question Review</h3>
+                        <div id="questionReviewContainer" class="question-review-container"></div>
+                    </div>
+                    
+                    <button id="restartBtn" class="btn btn-primary">Play Again</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="toast" id="toast"></div>
+    </div>
+
+    <footer class="quiz-footer">
+        <div class="footer-container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/amey-patbage-ab8387380/" target="_blank" class="social-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/AmeyPat07" target="_blank" class="social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="#" class="social-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+            <p class="footer-text">
+                &copy; Amey Codes.
+            </p>
+        </div>
+    </footer>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="quiz.js"></script>
+    <script src="app.js"></script>
+
+
+
+
+
+</body>
+</html>
